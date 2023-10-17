@@ -26,6 +26,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .requestMatchers("/api/v1/auth/login").permitAll()
+                .requestMatchers("/api/v1/auth/register").permitAll()
                 .requestMatchers("/demo").hasAnyAuthority("ROLE_USER")
                 .and()
                 .csrf().disable()

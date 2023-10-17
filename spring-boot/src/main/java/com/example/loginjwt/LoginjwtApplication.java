@@ -27,21 +27,21 @@ public class LoginjwtApplication {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    CommandLineRunner run(IUserService userService){
-        return args -> {
-            userService.saveRole(new Role(null, "ROLE_USER"));
-            userService.saveRole(new Role(null, "ROLE_MANAGER"));
-            userService.saveRole(new Role(null, "ROLE_ADMIN"));
-            userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
-
-            userService.saveUser(new User(null, "Danh Vinh", "danhvinh", "1234", "danhvinhh@gmail.com",new HashSet<>()));
-            userService.saveUser(new User(null, "Danh Khoa", "danhkhoa", "123456", "danhkhoa@gmail.com",new HashSet<>()));
-
-            userService.addRoleToUser("danhvinhh@gmail.com", "ROLE_USER");
-            userService.addRoleToUser("danhkhoa@gmail.com", "ROLE_ADMIN");
-            userService.addRoleToUser("danhvinhh@gmail.com", "ROLE_MANAGER");
-            userService.addRoleToUser("danhkhoa@gmail.com", "ROLE_SUPER_ADMIN");
-        };
-    }
+//    @Bean
+//    CommandLineRunner run(IUserService userService){
+//        return args -> {
+//            userService.saveRole(new Role(null, "ROLE_USER"));
+//            userService.saveRole(new Role(null, "ROLE_MANAGER"));
+//            userService.saveRole(new Role(null, "ROLE_ADMIN"));
+//            userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
+//
+//            userService.saveUser(new User(null, "Danh Vinh", "danhvinh", "1234", "danhvinhh@gmail.com",new HashSet<>()));
+//            userService.saveUser(new User(null, "Danh Khoa", "danhkhoa", "123456", "danhkhoa@gmail.com",new HashSet<>()));
+//
+//            userService.addRoleToUser("danhvinhh@gmail.com", "ROLE_USER");
+//            userService.addRoleToUser("danhkhoa@gmail.com", "ROLE_ADMIN");
+//            userService.addRoleToUser("danhvinhh@gmail.com", "ROLE_MANAGER");
+//            userService.addRoleToUser("danhkhoa@gmail.com", "ROLE_SUPER_ADMIN");
+//        };
+//    }
 }

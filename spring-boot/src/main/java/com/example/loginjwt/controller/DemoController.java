@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class DemoController {
 
-    private final AuthenticationService authenticationService;
-
-    @GetMapping("/test")
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("Authentication and Authorization successful");
-    }
+//    private final AuthenticationService authenticationService;
+//
+//    @GetMapping("/test")
+//    public ResponseEntity<String> test() {
+//        return ResponseEntity.ok("Authentication and Authorization successful");
+//    }
 }
